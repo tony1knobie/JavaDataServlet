@@ -12,7 +12,7 @@ public class HelloWorld extends HttpServlet {
    public void init() {
       // Do required initialization
       try {
-		message = rd.getContents();
+		message = ReadXML.getContents();
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -27,7 +27,7 @@ public class HelloWorld extends HttpServlet {
 
       // Actual logic goes here.
       PrintWriter out = response.getWriter();
-      out.println("<h1>" + message + "</h1>");
+      out.println(message);
    }
 
    public void destroy() {
