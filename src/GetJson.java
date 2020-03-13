@@ -4,8 +4,12 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 // Extend HttpServlet class
-public class HelloWorld extends HttpServlet {
+public class GetJson extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public ReadXML rd = new ReadXML();
    private String message;
 
