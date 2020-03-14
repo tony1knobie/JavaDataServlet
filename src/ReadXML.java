@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -10,13 +11,15 @@ import org.json.JSONObject;
 import org.json.XML;
 public class ReadXML {
  
-	 public static String path_string = "/home/brady/eclipse-workspace/ReadXML/WebContent/StudentGrades.xml";
-	 public static String xml = "";
+	 public static String path_string = "/home/brady/studentGrades.xml";
+	 public static String xml;
 	 public static int PRETTY_PRINT_INDENT_FACTOR = 4;
      public static String jsonPrettyPrintString = "no contents loaded";
 
 	 public static String getContents() throws IOException {
+		 System.out.println("getContents getContents ***********");
 	        try {
+	        	xml="";
 	        	Path path = Paths.get(path_string);
 	           List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);//   XmlMapper xmlMapper = new XmlMapper();
    				for (String s: lines) xml = xml+s;
@@ -27,4 +30,20 @@ public class ReadXML {
 	        }
 	        return jsonPrettyPrintString;
 	    }
+	 
+	 
+	 public static void saveXMLFile(String s) {
+		 System.out.println("savexmlfile");
+ 	     try {
+			FileWriter myWriter = new FileWriter(path_string);
+			myWriter.write(s);
+			myWriter.close();
+		} catch (IOException e) {
+			System.out.println("stacktrace stacktrae");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+ 
+
+	 }
 }
