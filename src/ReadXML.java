@@ -11,7 +11,7 @@ import org.json.JSONObject;
 import org.json.XML;
 public class ReadXML {
  
-	 public static String path_string = "/home/brady/studentGrades.xml";
+	 public static String path_string = "C:\\temp\\studentGrades.xml";
 	 public static String xml;
 	 public static int PRETTY_PRINT_INDENT_FACTOR = 4;
      public static String jsonPrettyPrintString = "no contents loaded";
@@ -28,6 +28,7 @@ public class ReadXML {
 	        } catch (JSONException je) {
 	            System.out.println(je.toString());
 	        }
+	        System.out.println(jsonPrettyPrintString);
 	        return jsonPrettyPrintString;
 	    }
 	 

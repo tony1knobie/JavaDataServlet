@@ -10,13 +10,13 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-   <servlet-name>HelloWorld</servlet-name>
-   <servlet-class>HelloWorld</servlet-class>
+   <servlet-name>GetJson</servlet-name>
+   <servlet-class>GetJson</servlet-class>
 </servlet>
 
 <servlet-mapping>
-   <servlet-name>HelloWorld</servlet-name>
-   <url-pattern>/HelloWorld</url-pattern>
+   <servlet-name>GetJson</servlet-name>
+   <url-pattern>/getJson</url-pattern>
 </servlet-mapping>
   <jsp-config>
     <jsp-property-group>
